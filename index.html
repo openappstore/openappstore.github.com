@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Open App Store - An open-source cross-platform app store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Open App Store is an open-source cross-platform app store. It's a way to discover new apps for your computer">
+    <meta name="author" content="Andrew Moist (@andyeo)">
+
+    <!-- Le styles -->
+    <link href="styles/css/bootstrap.css" rel="stylesheet">
+    <link href="styles/less/main.css" rel="stylesheet">
+    <link href="styles/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#home">Open App Store</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#home">Home</a></li>
+              <li><a href="#download">Download</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li>
+              <!--<li><a href="#">Get involved</a></li>-->
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div id="main-container" class="container">
+      <div id="home"></div>
+      <section id="introduction">
+        <h1>Open App Store</h1>
+        <p>The Open App Store is an open-source cross-platform app store. It's a way to discover new apps for your computer.</p>
+        <p>We expect organisations to have their own app stores and prioritise apps that are important to them. Our first goal is to work with the <a href="http://www.raspberrypi.org/">Raspberry Pi</a> community to build an app store for the education sector.</p>
+      </section>
+
+      <hr/>
+
+      <section id="download">
+        <h2>Download</h2>
+        <p>Currently the app store is in development. We encourage developers to get involved and download the current version.</p>
+        <div class="buttons">
+          <a href="https://github.com/andyuk/openappstore/zipball/master" class="btn btn-large btn-primary">
+            <i class="icon-download icon-white"></i>
+            Download zip</a>
+          <a href="https://github.com/andyuk/openappstore" class="btn btn-large btn-info">
+            Browse source code</a>
+        </div>
+      </section>
+      <!--
+      <section class="mailing-list">
+        <p>Join our mailing list to get infrequent updates on this project.</p>
+        <form></form>
+      </section>
+      -->
+      
+      <hr/>
+      
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <div>
+          <p class="question">Why do we need another app store?</p>
+          <p>There already many propriety app stores, but the companies running these app stores have complete control over the content. Maybe that doesn't fit in your beliefs or the needs of your organisation.</p>
+          <p>Mozilla are working on their own <a href="https://www.mozilla.org/en-US/apps/">app store</a>. We really like what they are doing and there is a lot of overlap with these projects so we would like to work with them and any other organisation passionate about open standards and moving the web forward. </p>
+        </div>
+
+        <div>
+          <p class="question">How do I download it?</p>
+          <p>Currently we are still working on our first version. Join the mailing list to find out 
+            more, or <a href="#download">download the source code</a>.</p>
+        </div>
+        <div>
+          <p class="question">What programming languages will be supported?</p>
+          <p>At first we are focusing on apps built in HTML, JavaScript and CSS. We intend to 
+            support JavaScript apps built with Node.js or simple client-side only apps.  </p>
+        </div>
+        <div>
+          <p class="question">Will you support language x, y or z?</p>
+          <p>Maybe. It's up for discussion.</p>
+        </div>
+        <div>
+          <p class="question">Will the apps run offline?</p>
+          <p>Yes, this is a requirement for any app.  </p>
+        </div>
+        <div>
+          <p class="question">Will there be any app review process?</p>
+          <p>Yes. It will be a completely transparent process; mainly to make sure apps are 
+            1) safe and 2) able to run on the supported operating systems.</p>
+        </div>
+        <div>
+          <p class="question">What operating systems will be supported?</p>
+          <p>At first, Microsoft Windows, Apple OSX and Fedora Linux. We plan to be as inclusive as possible. 
+            Please get involved to make sure we support your favourite operating system.</p>
+        </div>
+        <!--
+        <div>
+          <p class="question">How do I submit my app to the app store?</p>
+          <p>See this page for more details.   </p>
+        </div>
+        -->
+        <div>
+          <p class="question">Does my app need to be open source to be included in the app store?</p>
+          <p>This is up for discussion.</p>
+        </div>
+        <div>
+          <p class="question">Do you have any plans to support other programming languages other than JavaScript?</p>
+          <p>We are looking into it. Please join in the discussion if you are a developer and willing to help.</p>
+        </div>
+      </section>
+
+      <footer>
+        <p>Page made by <a href="http://twitter.com/andyeo">@andyeo</a> using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> and <a href="http://subtlepatterns.com/">Subtle Patterns</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="js/bootstrap-dropdown.js"></script>
+  <script src="js/bootstrap-scrollspy.js"></script>
+  <script src="js/bootstrap-collapse.js"></script>
+  <script>
+    // Hack: Workaround because our fixed navigation gets in the way when using normal link anchors
+    var PADDING_TOP = 60;
+    $(function() {
+      var position = $('.navbar').css('position');
+      if (position === 'fixed') {
+        $('body').scrollspy({offset: PADDING_TOP});
+        $('.navbar a').click(function(e) {
+          e.preventDefault();
+          var target = $(e.target).attr('href');
+          if (target) {
+            $('body').scrollTop($(target).offset().top - PADDING_TOP + 1);
+          }
+        });
+      }
+    })
+  </script>
+
+</html>
