@@ -28,14 +28,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#home">Open App Store</a>
+          <a class="brand" href="#home" class="anchor">Open App Store</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#home">Home</a></li>
-              <li><a href="#download">Download</a></li>
-              <li><a href="#faq">FAQ</a></li>
-              <li>
-              <!--<li><a href="#">Get involved</a></li>-->
+              <li class="active"><a href="#home" class="anchor">Home</a></li>
+              <li><a href="#download" class="anchor">Download</a></li>
+              <li><a href="#faq" class="anchor">FAQ</a></li>
+              <li><a href="https://groups.google.com/forum/#!forum/open-app-store">Forum</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -82,9 +81,8 @@
         </div>
 
         <div>
-          <p class="question">How do I download it?</p>
-          <p>Currently we are still working on our first version. Join the mailing list to find out 
-            more, or <a href="#download">download the source code</a>.</p>
+          <p class="question">How do I download and install it?</p>
+          <p>Read the <a href="https://github.com/openappstore/openappstore-client">installation instructions here</a>. This version is intended for developers. We'll be making the install process easier in a future version.</p>
         </div>
         <div>
           <p class="question">What programming languages will be supported?</p>
@@ -93,11 +91,11 @@
         </div>
         <div>
           <p class="question">Will you support language x, y or z?</p>
-          <p>Maybe. It's up for discussion.</p>
+          <p>Maybe. <a href="https://groups.google.com/forum/#!forum/open-app-store">Discuss in the forums</a>.</p>
         </div>
         <div>
           <p class="question">Will the apps run offline?</p>
-          <p>Yes, this is a requirement for any app.  </p>
+          <p>Yes, this is a requirement for any app.</p>
         </div>
         <div>
           <p class="question">Will there be any app review process?</p>
@@ -117,11 +115,11 @@
         -->
         <div>
           <p class="question">Does my app need to be open source to be included in the app store?</p>
-          <p>This is up for discussion.</p>
+          <p>This is to be decided. <a href="https://groups.google.com/forum/#!forum/open-app-store">Discuss in the forum</a>.</p>
         </div>
         <div>
           <p class="question">Do you have any plans to support other programming languages other than JavaScript?</p>
-          <p>We are looking into it. Please join in the discussion if you are a developer and willing to help.</p>
+          <p>We are looking into it. Please <a href="https://groups.google.com/forum/#!forum/open-app-store">join in the discussion</a> if you are a developer and willing to help.</p>
         </div>
       </section>
 
@@ -144,7 +142,7 @@
       var position = $('.navbar').css('position');
       if (position === 'fixed') {
         $('body').scrollspy({offset: PADDING_TOP});
-        $('.navbar a').click(function(e) {
+        $('.navbar a.anchor').click(function(e) {
           e.preventDefault();
           var target = $(e.target).attr('href');
           if (target) {
